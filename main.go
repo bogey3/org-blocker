@@ -46,8 +46,7 @@ func ip2int(ip net.IP) uint32 {
 
 func testIP(host *net.TCPAddr)(bool, string) {
 	fmt.Println("-> Finding organization")
-	//data, err := rdapClient.QueryIP(host.IP.String())
-	data, err := rdapClient.QueryIP("109.127.2.69")
+	data, err := rdapClient.QueryIP(host.IP.String())
 	var network *net.IPNet
 	if err == nil {
 		if data.IPVersion == "v4" {
